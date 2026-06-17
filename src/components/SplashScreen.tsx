@@ -62,7 +62,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
 
           {/* Agency name */}
           <motion.h1
-            className="text-4xl md:text-5xl font-black mb-4 gradient-text"
+            className="text-2xl sm:text-3xl md:text-5xl font-black mb-4 gradient-text whitespace-nowrap tracking-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
