@@ -259,17 +259,17 @@ const Index = () => {
                     </div>
 
                     {/* Icons and labels container */}
-                    <div className="flex items-center gap-4 mt-auto">
+                    <div className="flex justify-center items-center gap-8 w-full mt-4">
                       <a
                         href="https://zorvian-pay.vercel.app"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-1 text-primary hover:text-white transition-all group"
+                        className="flex flex-col items-center gap-1.5 text-primary hover:text-white transition-all group"
                       >
-                        <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 border border-primary/20 flex items-center justify-center group-hover:scale-105 transition-all">
-                          <Globe size={18} />
+                        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 border border-primary/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                          <Globe size={24} />
                         </div>
-                        <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+                        <span className="text-xs sm:text-sm font-semibold text-muted-foreground group-hover:text-primary transition-colors">
                           website
                         </span>
                       </a>
@@ -277,12 +277,12 @@ const Index = () => {
                         href="https://www.instagram.com/sri_mutharamman_store?igsh=MXBmYXEyMWkwM3pvbA=="
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-1 transition-all group"
+                        className="flex flex-col items-center gap-1.5 transition-all group"
                       >
-                        <div className="p-2 rounded-lg bg-[#E1306C]/10 group-hover:bg-[#E1306C]/20 border border-[#E1306C]/20 flex items-center justify-center group-hover:scale-105 transition-all" style={{ color: '#E1306C' }}>
-                          <Instagram size={18} />
+                        <div className="p-3 rounded-xl bg-[#E1306C]/10 group-hover:bg-[#E1306C]/20 border border-[#E1306C]/20 flex items-center justify-center group-hover:scale-105 transition-all" style={{ color: '#E1306C' }}>
+                          <Instagram size={24} />
                         </div>
-                        <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-[#E1306C] transition-colors">
+                        <span className="text-xs sm:text-sm font-semibold text-muted-foreground group-hover:text-[#E1306C] transition-colors">
                           instagram
                         </span>
                       </a>
@@ -290,12 +290,12 @@ const Index = () => {
                         href="https://maps.app.goo.gl/fFJf6G6zeBaurqRu8"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-1 text-emerald-400 hover:text-white transition-all group"
+                        className="flex flex-col items-center gap-1.5 text-emerald-400 hover:text-white transition-all group"
                       >
-                        <div className="p-2 rounded-lg bg-emerald-400/10 group-hover:bg-emerald-400/20 border border-emerald-400/20 flex items-center justify-center group-hover:scale-105 transition-all">
-                          <MapPin size={18} />
+                        <div className="p-3 rounded-xl bg-emerald-400/10 group-hover:bg-emerald-400/20 border border-emerald-400/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                          <MapPin size={24} />
                         </div>
-                        <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-emerald-400 transition-colors">
+                        <span className="text-xs sm:text-sm font-semibold text-muted-foreground group-hover:text-emerald-400 transition-colors">
                           direction
                         </span>
                       </a>
