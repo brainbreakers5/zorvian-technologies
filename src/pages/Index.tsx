@@ -199,7 +199,7 @@ const Index = () => {
         {/* Customers Section */}
         <AnimatedSection delay={0.4}>
           <div className="max-w-xl mx-auto px-4 mb-16 text-center">
-            <span className="text-sm md:text-base font-semibold text-muted-foreground uppercase tracking-widest block mb-2">
+            <span className="text-sm md:text-base font-semibold uppercase tracking-widest block mb-2" style={{ color: "#FACC15" } as React.CSSProperties}>
               Proud to Showcase
             </span>
             <h3 className="text-xl md:text-2xl font-extrabold text-foreground mb-6">
@@ -243,59 +243,62 @@ const Index = () => {
                   <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">
                     Deployed Solutions
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {/* Zorvian Smart Billing */}
-                    <div className="flex flex-col justify-between bg-glass/40 border border-glass-border rounded-xl p-3">
-                      <span className="font-semibold text-foreground text-sm mb-2 text-left">Zorvian Smart Billing-Software</span>
-                      <div className="flex items-center justify-between mt-auto">
-                        <span className="text-[10px] uppercase font-extrabold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20">Active</span>
-                      </div>
+                  {/* Zorvian Smart Billing Card */}
+                  <div className="relative flex flex-col justify-between bg-glass/40 border border-glass-border rounded-xl p-4 w-full">
+                    {/* Active badge in top right corner */}
+                    <div className="absolute top-4 right-4">
+                      <span className="text-[10px] uppercase font-extrabold text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded border border-emerald-400/20">
+                        Active
+                      </span>
                     </div>
                     
-                    {/* Connect Card */}
-                    <div className="flex flex-col justify-between bg-glass/40 border border-glass-border rounded-xl p-3">
-                      <span className="font-semibold text-foreground text-sm mb-2 text-left">Quick Links</span>
-                      <div className="flex items-center gap-4 mt-auto">
-                        <a
-                          href="https://zorvian-pay.vercel.app"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex flex-col items-center gap-1 text-primary hover:text-white transition-all group"
-                        >
-                          <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 border border-primary/20 flex items-center justify-center group-hover:scale-105 transition-all">
-                            <Globe size={18} />
-                          </div>
-                          <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground group-hover:text-primary transition-colors">
-                            website
-                          </span>
-                        </a>
-                        <a
-                          href="https://www.instagram.com/sri_mutharamman_store?igsh=MXBmYXEyMWkwM3pvbA=="
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex flex-col items-center gap-1 transition-all group"
-                        >
-                          <div className="p-2 rounded-lg bg-[#E1306C]/10 group-hover:bg-[#E1306C]/20 border border-[#E1306C]/20 flex items-center justify-center group-hover:scale-105 transition-all" style={{ color: '#E1306C' }}>
-                            <Instagram size={18} />
-                          </div>
-                          <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground group-hover:text-[#E1306C] transition-colors">
-                            instagram
-                          </span>
-                        </a>
-                        <a
-                          href="https://maps.app.goo.gl/fFJf6G6zeBaurqRu8"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex flex-col items-center gap-1 text-emerald-400 hover:text-white transition-all group"
-                        >
-                          <div className="p-2 rounded-lg bg-emerald-400/10 group-hover:bg-emerald-400/20 border border-emerald-400/20 flex items-center justify-center group-hover:scale-105 transition-all">
-                            <MapPin size={18} />
-                          </div>
-                          <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground group-hover:text-emerald-400 transition-colors">
-                            direction
-                          </span>
-                        </a>
-                      </div>
+                    <div className="text-left pr-16 mb-4">
+                      <span className="font-bold text-foreground text-sm sm:text-base block">
+                        Zorvian Smart Billing-Software
+                      </span>
+                    </div>
+
+                    {/* Icons and labels container */}
+                    <div className="flex items-center gap-4 mt-auto">
+                      <a
+                        href="https://zorvian-pay.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-1 text-primary hover:text-white transition-all group"
+                      >
+                        <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 border border-primary/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                          <Globe size={18} />
+                        </div>
+                        <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+                          website
+                        </span>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/sri_mutharamman_store?igsh=MXBmYXEyMWkwM3pvbA=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-1 transition-all group"
+                      >
+                        <div className="p-2 rounded-lg bg-[#E1306C]/10 group-hover:bg-[#E1306C]/20 border border-[#E1306C]/20 flex items-center justify-center group-hover:scale-105 transition-all" style={{ color: '#E1306C' }}>
+                          <Instagram size={18} />
+                        </div>
+                        <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-[#E1306C] transition-colors">
+                          instagram
+                        </span>
+                      </a>
+                      <a
+                        href="https://maps.app.goo.gl/fFJf6G6zeBaurqRu8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-1 text-emerald-400 hover:text-white transition-all group"
+                      >
+                        <div className="p-2 rounded-lg bg-emerald-400/10 group-hover:bg-emerald-400/20 border border-emerald-400/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                          <MapPin size={18} />
+                        </div>
+                        <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-emerald-400 transition-colors">
+                          direction
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
