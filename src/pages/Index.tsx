@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, Printer, Shield, Zap, BarChart3, Smartphone, Cloud, Palette, HeartHandshake, IndianRupee, ChevronDown, PartyPopper, Instagram, Store, ExternalLink } from "lucide-react";
+import { Globe, Printer, Shield, Zap, BarChart3, Smartphone, Cloud, Palette, HeartHandshake, IndianRupee, ChevronDown, PartyPopper, Instagram, Store, ExternalLink, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const slides = [
@@ -198,9 +198,12 @@ const Index = () => {
 
         {/* Customers Section */}
         <AnimatedSection delay={0.4}>
-          <div className="max-w-xl mx-auto px-4 mb-16">
-            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mb-6 text-center">
-              Our Featured <span className="gradient-text">Customer</span>
+          <div className="max-w-xl mx-auto px-4 mb-16 text-center">
+            <span className="text-sm md:text-base font-semibold text-muted-foreground uppercase tracking-widest block mb-2">
+              Proud to Showcase
+            </span>
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground mb-6">
+              Our Successful <span className="gradient-text">Customer</span>
             </h3>
             
             <motion.div
@@ -215,26 +218,24 @@ const Index = () => {
                 {/* Store Header */}
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-primary/10 border border-primary/20">
-                      <Store size={26} className="text-primary" />
+                    <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center border border-primary/20 bg-primary/5">
+                      <img
+                        src="/sri mutharamman store logo.jpeg"
+                        alt="Sri Mutharamman Store Logo"
+                        className="w-full h-full object-cover rounded-full"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                        }}
+                      />
                     </div>
                     <div className="text-left">
                       <h4 className="font-extrabold text-foreground text-lg sm:text-xl leading-tight">
-                        SMS Sri Mutharamman Store
+                        Sri Mutharamman Store
                       </h4>
-                      <p className="text-xs text-muted-foreground mt-0.5 tracking-wider uppercase font-semibold">Retail Store Partner</p>
+                      <p className="text-xs text-muted-foreground mt-0.5 tracking-wider uppercase font-semibold">Coimbatore</p>
                     </div>
                   </div>
-                  
-                  <a
-                    href="https://www.instagram.com/sri_mutharamman_store?igsh=MXBmYXEyMWkwM3pvbA=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-pink-500 transition-colors p-2 rounded-xl hover:bg-pink-500/10 flex items-center justify-center border border-transparent hover:border-pink-500/20"
-                    title="Follow on Instagram"
-                  >
-                    <Instagram size={22} />
-                  </a>
                 </div>
 
                 {/* Installed Systems */}
@@ -245,25 +246,57 @@ const Index = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {/* Zorvian Smart Billing */}
                     <div className="flex flex-col justify-between bg-glass/40 border border-glass-border rounded-xl p-3">
-                      <span className="font-semibold text-foreground text-sm mb-2 text-left">Zorvian Smart Billing</span>
+                      <span className="font-semibold text-foreground text-sm mb-2 text-left">Zorvian Smart Billing-Software</span>
                       <div className="flex items-center justify-between mt-auto">
                         <span className="text-[10px] uppercase font-extrabold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/20">Active</span>
                       </div>
                     </div>
                     
-                    {/* Paypage */}
-                    <a
-                      href="https://zorvian-pay.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-col justify-between bg-glass/40 border border-glass-border hover:border-primary/50 rounded-xl p-3 transition-all group hover:bg-primary/5"
-                    >
-                      <span className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors mb-2 text-left">Paypage</span>
-                      <div className="flex items-center justify-between mt-auto w-full">
-                        <span className="text-[10px] uppercase font-extrabold text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20 group-hover:bg-primary group-hover:text-black transition-all">Launch App</span>
-                        <ExternalLink size={12} className="text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    {/* Connect Card */}
+                    <div className="flex flex-col justify-between bg-glass/40 border border-glass-border rounded-xl p-3">
+                      <span className="font-semibold text-foreground text-sm mb-2 text-left">Quick Links</span>
+                      <div className="flex items-center gap-4 mt-auto">
+                        <a
+                          href="https://zorvian-pay.vercel.app"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex flex-col items-center gap-1 text-primary hover:text-white transition-all group"
+                        >
+                          <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 border border-primary/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                            <Globe size={18} />
+                          </div>
+                          <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+                            website
+                          </span>
+                        </a>
+                        <a
+                          href="https://www.instagram.com/sri_mutharamman_store?igsh=MXBmYXEyMWkwM3pvbA=="
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex flex-col items-center gap-1 transition-all group"
+                        >
+                          <div className="p-2 rounded-lg bg-[#E1306C]/10 group-hover:bg-[#E1306C]/20 border border-[#E1306C]/20 flex items-center justify-center group-hover:scale-105 transition-all" style={{ color: '#E1306C' }}>
+                            <Instagram size={18} />
+                          </div>
+                          <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground group-hover:text-[#E1306C] transition-colors">
+                            instagram
+                          </span>
+                        </a>
+                        <a
+                          href="https://maps.app.goo.gl/fFJf6G6zeBaurqRu8"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex flex-col items-center gap-1 text-emerald-400 hover:text-white transition-all group"
+                        >
+                          <div className="p-2 rounded-lg bg-emerald-400/10 group-hover:bg-emerald-400/20 border border-emerald-400/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                            <MapPin size={18} />
+                          </div>
+                          <span className="text-[10px] sm:text-xs font-semibold text-muted-foreground group-hover:text-emerald-400 transition-colors">
+                            direction
+                          </span>
+                        </a>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
