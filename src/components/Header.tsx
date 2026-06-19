@@ -5,6 +5,7 @@ import logo from "@/assets/zorvian-logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
+  { label: "Our Customers", path: "/#customers" },
   { label: "Pro - Website & Web App", path: "/website-designing" },
   { label: "Smart Billing System", path: "/smart-billing" },
   { label: "Functions & Events", path: "/functions-events" },
@@ -18,6 +19,7 @@ const socialLinks = [
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -66,7 +68,21 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  if (link.path.startsWith("/#")) {
+                    e.preventDefault();
+                    const id = link.path.substring(2);
+                    if (location.pathname === "/") {
+                      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      navigate("/");
+                      setTimeout(() => {
+                        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+                      }, 100);
+                    }
+                  }
+                  setMenuOpen(false);
+                }}
                 className={`text-sm font-medium py-2 px-3 rounded-lg transition-all duration-300 hover:text-primary hover:bg-secondary/50 ${
                   location.pathname === link.path ? "text-primary bg-secondary/30" : "text-muted-foreground"
                 }`}

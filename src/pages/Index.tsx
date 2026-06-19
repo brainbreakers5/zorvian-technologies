@@ -209,7 +209,7 @@ const Index = () => {
 
         {/* Customers Section */}
         <AnimatedSection delay={0.4}>
-          <div className="max-w-xl mx-auto px-4 mb-16 text-center">
+          <div id="customers" className="max-w-xl mx-auto px-4 mb-16 text-center">
             <span className="text-sm md:text-base font-semibold uppercase tracking-widest block mb-2" style={{ color: "#FACC15" } as React.CSSProperties}>
               Proud to Showcase
             </span>
