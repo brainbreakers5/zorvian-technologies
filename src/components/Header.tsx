@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Instagram, MessageCircle, Mail, Menu, X, Linkedin } from "lucide-react";
+import { Instagram, MessageCircle, Menu, X } from "lucide-react";
 import logo from "@/assets/zorvian-logo.png";
 
 const navLinks = [
@@ -14,8 +14,6 @@ const navLinks = [
 const socialLinks = [
   { icon: Instagram, href: "https://www.instagram.com/zorvian_agency?igsh=bWFycHZjZDRwbG5t", label: "Instagram", color: "#E1306C" },
   { icon: MessageCircle, href: "https://wa.me/919943812771", label: "WhatsApp", color: "#25D366" },
-  { icon: Mail, href: "mailto:zorviantechnologies@gmail.com", label: "Email", color: "#EA4335" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/zorvian-strategy-design-growth-1678133b6", label: "LinkedIn", color: "#0A66C2" },
 ];
 
 const Header = () => {

@@ -196,6 +196,17 @@ const Index = () => {
           </div>
         </AnimatedSection>
 
+        {/* Scroll down indicator */}
+        <motion.div
+          className="flex flex-col items-center gap-2 cursor-pointer mb-16"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          onClick={() => document.getElementById("why-choose")?.scrollIntoView({ behavior: "smooth" })}
+        >
+          <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll Down</span>
+          <ChevronDown size={20} className="text-primary" />
+        </motion.div>
+
         {/* Customers Section */}
         <AnimatedSection delay={0.4}>
           <div className="max-w-xl mx-auto px-4 mb-16 text-center">
@@ -264,12 +275,12 @@ const Index = () => {
                         href="https://zorvian-pay.vercel.app"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-1.5 text-primary hover:text-white transition-all group"
+                        className="flex flex-col items-center gap-1.5 transition-all group"
                       >
-                        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 border border-primary/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                        <div className="p-3 rounded-xl bg-[#FACC15]/10 group-hover:bg-[#FACC15]/20 border border-[#FACC15]/20 flex items-center justify-center group-hover:scale-105 transition-all" style={{ color: '#FACC15' }}>
                           <Globe size={24} />
                         </div>
-                        <span className="text-xs sm:text-sm font-semibold text-muted-foreground group-hover:text-primary transition-colors">
+                        <span className="text-xs sm:text-sm font-semibold text-muted-foreground group-hover:text-[#FACC15] transition-colors">
                           website
                         </span>
                       </a>
@@ -290,12 +301,12 @@ const Index = () => {
                         href="https://maps.app.goo.gl/fFJf6G6zeBaurqRu8"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-1.5 text-emerald-400 hover:text-white transition-all group"
+                        className="flex flex-col items-center gap-1.5 transition-all group"
                       >
-                        <div className="p-3 rounded-xl bg-emerald-400/10 group-hover:bg-emerald-400/20 border border-emerald-400/20 flex items-center justify-center group-hover:scale-105 transition-all">
+                        <div className="p-3 rounded-xl bg-[#3B82F6]/10 group-hover:bg-[#3B82F6]/20 border border-[#3B82F6]/20 flex items-center justify-center group-hover:scale-105 transition-all" style={{ color: '#3B82F6' }}>
                           <MapPin size={24} />
                         </div>
-                        <span className="text-xs sm:text-sm font-semibold text-muted-foreground group-hover:text-emerald-400 transition-colors">
+                        <span className="text-xs sm:text-sm font-semibold text-muted-foreground group-hover:text-[#3B82F6] transition-colors">
                           direction
                         </span>
                       </a>
@@ -306,17 +317,6 @@ const Index = () => {
             </motion.div>
           </div>
         </AnimatedSection>
-
-        {/* Scroll down indicator */}
-        <motion.div
-          className="flex flex-col items-center gap-2 cursor-pointer"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          onClick={() => document.getElementById("why-choose")?.scrollIntoView({ behavior: "smooth" })}
-        >
-          <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll Down</span>
-          <ChevronDown size={20} className="text-primary" />
-        </motion.div>
       </section>
 
       {/* Why Choose Us */}

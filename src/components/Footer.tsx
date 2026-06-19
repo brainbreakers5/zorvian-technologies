@@ -1,10 +1,11 @@
-import { Instagram, MessageCircle, Mail, Linkedin } from "lucide-react";
+import { Instagram, MessageCircle, Mail, Linkedin, Phone } from "lucide-react";
 
 const links = [
   { icon: Instagram, href: "https://www.instagram.com/zorvian_agency?igsh=bWFycHZjZDRwbG5t", label: "Instagram", color: "#E1306C" },
-  { icon: MessageCircle, href: "https://wa.me/919943812771", label: "WhatsApp", color: "#25D366" },
-  { icon: Mail, href: "mailto:zorviantechnologies@gmail.com", label: "Email", color: "#EA4335" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/zorvian-strategy-design-growth-1678133b6", label: "LinkedIn", color: "#0A66C2" },
+  { icon: Mail, href: "mailto:zorviantechnologies@gmail.com", label: "Email", color: "#EA4335" },
+  { icon: MessageCircle, href: "https://wa.me/919943812771", label: "WhatsApp", color: "#25D366" },
+  { icon: Phone, href: "tel:+916385812770", label: "Call Us", color: "#00BFFF" },
 ];
 
 const Footer = () => (

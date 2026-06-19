@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const contacts = [
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/zorvian_agency?igsh=bWFycHZjZDRwbG5t", color: "#E1306C", text: "@zorvian_agency" },
-  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/919943812771", color: "#25D366", text: "+91 99438 12771" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/zorvian-strategy-design-growth-1678133b6", color: "#0A66C2", text: "ZORVIAN Technologies" },
-  { icon: Phone, label: "Call Us", href: "tel:+919943812771", color: "#00BFFF", text: "+91 99438 12771" },
   { icon: Mail, label: "Email", href: "mailto:zorviantechnologies@gmail.com", color: "#EA4335", text: "zorviantechnologies@gmail.com" },
+  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/919943812771", color: "#25D366", text: "+91 99438 12771" },
+  { icon: Phone, label: "Call Us", href: "tel:+916385812770", color: "#00BFFF", text: "+91 63858 12770" },
 ];
 
 const Contact = () => (
